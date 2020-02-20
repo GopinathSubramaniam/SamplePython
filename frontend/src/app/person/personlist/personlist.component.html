@@ -1,0 +1,21 @@
+<nav aria-label="breadcrumb">
+   <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+      <li class="breadcrumb-item active"><a routerLink="#">Employee List</a></li>
+   </ol>
+</nav>
+<div class="container-fluid">
+   <div class="row" align="center">
+      <div class="col-md-2" *ngFor="let emp of personList" style="padding-bottom: 15px;">
+         <div class="card" style="width: 15rem;">
+            <div class="card-body">
+               <h5 class="card-title">{{emp.name}}</h5>
+               <a href="#" class="d-block mb-4 h-100">
+                  <img class="img-fluid img-thumbnail" src="{{emp.imgPath}}" alt="" style="height:100px;">
+               </a>
+               <h5>Software Engineer</h5>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

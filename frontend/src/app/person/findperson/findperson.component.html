@@ -1,0 +1,46 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+    <li class="breadcrumb-item active"><a routerLink="#">Find Employee</a></li>
+  </ol>
+</nav>
+<div class="container-fluid">
+  <div class="col-lg">
+    <div class="row">
+      <div class="col-">
+        <input type="file" id="file" name="file" aria-describedby="fileHelp" placeholder="Select File"
+          (change)="showImgPrev($event)">
+      </div>
+      <div class="col-">
+        <button class="btn btn-primary btn-sm" (click)="verifyImg()">Verify Image</button>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg">
+    &nbsp;
+  </div>
+  <div class="col-lg">
+    <div class="row" align="center">
+      <div class="col-">
+        <h6>Selected Picture</h6>
+        <div>
+          <a href="#" class="d-block mb-4 h-100">
+            <img id="preview" src="{{defaultImgSrc}}" alt="Preview" class="rounded" style="height:100px;">
+          </a>
+        </div>
+      </div>
+      <div class="col-">
+        &nbsp;
+      </div>
+      <div class="col-">
+        <h6>Matched Picture</h6>
+        <div>
+          <a href="#" class="d-block mb-4 h-100">
+            <img id="original" [src]="matchedImgSrc" alt="Original" class="rounded" style="height:100px;">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<ngx-spinner></ngx-spinner>
